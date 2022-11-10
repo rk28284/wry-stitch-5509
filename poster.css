@@ -8,9 +8,6 @@ body{
     background-color: rgb(154, 42, 42);
     background-image: url("https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW44/ODLR_Big_DSK_2x_20221028110114.jpg?imwidth=600&imdensity=2");
     color: aliceblue;
-    /* padding-left: 800px;
-    padding-top: 200px;
-    padding-bottom: 200px; */
     margin: auto;
    
 }
@@ -20,19 +17,7 @@ body{
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    
+    padding-left: 700px;
+    padding-top: 200px;
     width: 100%;
 }
-/* #test{
-    width: 95%;
-    height: 400px;
-    border: 1px solid red;
-    margin: auto;
-    background-image: url("https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW44/ODLR_Big_DSK_2x_20221028110114.jpg?imwidth=600&imdensity=2");
-    /* width: fit-content; */
-
-/* test{
-    width: 200px;
-    height: 80px;
-    border: 1px solid red;
-} */

@@ -91,3 +91,59 @@ padding-left: 10px;
     border: 1px solid red;
     margin: auto;
 }
+.newarrival{
+ width: 95%;
+ height: 250px;
+ border:1px solid red;
+ margin: auto;
+ margin-top: 30px;
+background-color: rgb(234, 231, 227);
+text-align: center;
+}
+button{
+    padding: 10px;
+}
+/* roger part start here */
+.roger{
+    display:flex;
+   flex-direction: row;
+    width: 95%;
+ height: 200px;
+ border:1px solid red;
+ margin: auto;
+ text-align: center;
+}
+.roger-child{
+    width: 50%;
+    height: 200px;
+    border:1px solid rgb(0, 64, 255);
+}
+/* this is poster-2 */
+.poster-2{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 600px;
+    border: 1px solid red;
+    margin: auto;
+}
+.poster-2-child1{
+    width: 50%;
+    height: 600px;
+    border: 1px solid rgb(34, 3, 3);
+    margin: auto;
+}
+.poster-2-child2{
+    display: grid;
+   justify-content: space-between;
+    width: 50%;
+    height: 600px;
+    border: 3px solid rgb(3, 7, 34);
+    margin: auto;
+}
+.poster-2-child2-1{
+    width: 50%;
+    height: 600px;
+    border: 3px solid rgb(3, 7, 34);
+    margin: auto;
+}
