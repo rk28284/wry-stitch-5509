@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arrival.css">
+    <link rel="stylesheet" href="signup.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- this is navbar -->
+    <div class="navbar">
+        <div class="option">
+            <div class="option">
+                <div class="option1-child"><a href="women.html">WOMEN</a> </div>
+                <div class="option1-child">MEN</div>
+                <div class="option1-child">KIDS</div>
+                <div class="option1-child">LIFE</div>
+            </div>
+            <div class="option">
+                <div class="option2-child">Signup For Newsletter</div>
+                <div class="option2-child">My Account</div>
+                <div class="option2-child">My Wishlist</div>
+                <div class="option2-child">Malaysia|English</div>
+            </div>
+        </div>
+    </div>
+    <!-- this is logo section -->
+    <div class="logo">
+        <div class="logo-child">
+            <a href="index.html">
+                <img width="25%" src="./Rakesh kumar.jpg" alt="logo-child">
+            </a>
+
+        </div>
+        <div class="logo-cart">
+            <a href="cart.html"> Shopping Bag<span><img width="20%"
+                        src="https://cdn-icons-png.flaticon.com/512/2662/2662503.png" alt=""></span></a>
+        </div>
+    </div>
+    <!-- this is second nav -->
+    <div class="navbar-2">
+        <div class=" navbar2-child">
+            <div class="item">NEW ARRIVALS</div>
+            <div class="item">DESIGNERS</div>
+            <div class="item">CLOTHING</div>
+            <div class="item">>SHOES</div>
+            <div class="item">BAGS</div>
+            <div class="item">ACCESSORIES</div>
+            <div class="item">JEWELRY</div>
+            <div class="item">VACATION</div>
+            <div class="item">SALE</div>
+            <input id="input" type="text" placeholder="Search For..">
+        </div>
+    </div>
+    <!-- this is horizontal line -->
+    <hr>
+    <div class="parent">
+        
+    </div>
+    
+    <div class="signparent">
+        <div class="signuppage">
+            <p>NEWSLETTER REGISTRATION</p>
+            <div><input id="first" type="text" placeholder="First Name"></div>
+            <div><input id="last" type="text" placeholder="Last Name"></div>
+            <div><input id="email" type="text" placeholder="Email address"></div>
+            <div><input id="pass" type="text" placeholder="Passward(at least 6 characters)"></div>
+            <div><input id="cpass" type="text" placeholder=" confirm Passward"></div>
+    
+            <p><input type="checkbox" />I agree that Mytheresa may insert analytical web beacons into the newsletter and<br>
+                create a personalized user profile based on my purchase and usage behavior,<br>
+                including sending a notification when I have placed something in the shopping cart.<br>
+                Further details can be found in our Privacy Policy, clause 5. I understand that I can<br>
+                revoke my consent at any time by emailing privacy@mytheresa.com.</p>
+            <div><button id="signup">SIGN UP HERE</button></div>
+        </div>
+        <div class="signuppage">
+         <p>ALREADY REGISTERED?</p>
+         <p>If you have an account with us, please log in.</p>
+        <form>
+            <label for="">Email</label><br>
+            <input type="text" name="email" id="email" placeholder="email address.">
+            <label for="">Password</label>
+            <input type="text" name="password" id="pass" placeholder="password">
+            <a href="">Forget Password</a>
+            <input type="submit">
+            <p>At Mytheresa, we keep your information secure. As a result, it will be<br>
+                necessary for you to log in to your account before you are able to place an<br></p>
+                order or change the information on your account. You will be asked to log<br>
+                in to complete your order even if you have already been greeted on the<br>
+                website.<br>
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+<script>
+    let arr_data = JSON.parse(localStorage.getItem("arrival")) || [];
+//    let obj={};
+    
+    document.querySelector("#signup").addEventListener("click",logData);
+
+    function logData() {
+        // console.log("rakesh")
+        let firstname = document.querySelector("#first").value;
+        console.log(firstname);
+        let lastname = document.querySelector("#last").value;
+        let email = document.querySelector("#email").value;
+        let passward = document.querySelector("#pass").value;
+        let confirmpassward = document.querySelector("#cpass").value;
+        if (passward!=confirmpassward) {
+            alert("PLease enter correct passward")
+        } else {
+           let obj={
+            firstname,
+            lastname,
+            email,
+             passward,
+            confirmpassward
+                
+            }
+            arr_data.push(obj);
+            localStorage.setItem("arrival", JSON.stringify(arr_data));
+            alert("Successfully Signup");
+
+        }
+    }
+
+    // login start here
+    document.querySelector("form").addEventListener("submit",loginPart);
+    function loginPart(event){
+    event.preventDefault();
+    let logemail=document.querySelector("#email").value;
+    let logpassword=document.querySelector("#pass").value;
+
+    let Data=JSON.parse(localStorage.getItem("arrival"))||[];
+    let flag="no";
+    for(let i=0;i<Data.length;i++){
+        if(data[i].email==logemail&&data[i].passward==logpassword){
+            flag="yes";
+            break;
+        }
+    }
+    if(flag=="yes"){
+        alert("Logged Successful")
+    }else{
+        alert("Invaild Credentials")
+    }
+    }
+
+
+</script>

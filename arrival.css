@@ -1,0 +1,108 @@
+/* this is navbar */
+.navbar{
+    display:flex;
+    width: 95%;
+    height: auto;
+    /* border: 1px solid red; */
+    margin: auto;
+}
+.option{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.option1-child{
+   height: auto;
+   width:12%;
+   justify-content: center;
+   text-align: center;
+  margin: 10px;
+ 
+
+}
+.option2-child{
+    padding-top: 10px;
+    text-align: center;
+    /* border: 1px solid blue; */
+    height: 88%;
+   width:25%;
+    justify-content: space-around
+  
+}
+/* this is logo */
+.logo{
+    display: flex;
+    padding-top: 10px;
+    margin: auto;
+    height: 100px;
+    width: 95%;
+    /* border: 1px solid red; */
+    text-align: center;
+    margin-bottom: 20px;
+}
+.logo-child{
+    justify-content: center;
+height: auto;
+width: 95%;
+/* border: 1px solid rgb(38, 92, 199); */
+}
+.logo-cart{
+    text-align:right;
+height:auto;
+width: 14%;
+/* border: 1px solid rgb(49, 196, 41); */
+margin-top: 10px;
+margin-left: 10px;
+padding-left: 10px;
+}
+
+/* this is second navbar */
+.navbar-2{
+    display:flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    /* border: 1px solid red; */
+    margin: auto;
+
+}
+.navbar2-child{
+    display:flex;
+    width: 100%;
+    height: auto;
+}
+.item{
+    justify-content: center;
+    height: auto;
+    width:9%;
+    /* border: 1px solid rgb(38, 92, 199); */
+}
+#input{
+    margin-left: 20px;
+    margin-top: 5px;
+   padding-right: 50px;
+    height: 20px;
+    width: 9%;
+}
+a{
+    display: block;
+}
+.arrival{
+display: flex;
+flex-direction: row;
+width: 95%;
+height: 800px;
+ border: 1px solid rgb(38, 92, 199);
+}
+.product{
+    width: 85%;
+    height: 800px;
+    border: 1px solid rgb(43, 199, 38);
+}
+.filter{
+width: 15%;
+height: 200px;
+border: 1px solid rgb(199, 38, 38);
+}

@@ -1,4 +1,3 @@
-
 /* this is navbar */
 .navbar{
     display:flex;
@@ -100,7 +99,7 @@ padding-left: 10px;
  /* border:1px solid red; */
  margin: auto;
  margin-top: 30px;
-/* background-color: rgb(234, 231, 227); */
+background-color: rgb(234, 231, 227);
 text-align: center;
 }
 button{

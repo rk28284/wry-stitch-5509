@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arrival.css">
+ 
+    <title>Document</title>
+</head>
+<body>
+    <!-- this is navbar -->
+   <div class="navbar">
+    <div class="option">
+        <div class="option">
+            <div class="option1-child"><a href="women.html">WOMEN</a> </div>
+            <div class="option1-child">MEN</div>
+            <div class="option1-child">KIDS</div>
+            <div class="option1-child">LIFE</div>
+        </div>
+        <div class="option">
+         <div class="option2-child">Signup For Newsletter</div>
+        <div class="option2-child">My Account</div>
+        <div class="option2-child">My Wishlist</div>
+        <div class="option2-child">Malaysia|English</div>
+        </div>
+   </div>
+</div>
+   <!-- this is logo section -->
+   <div class="logo">
+    <div class="logo-child">
+        <a href="index.html">
+        <img width="25%" src="./Rakesh kumar.jpg" alt="logo-child">
+        </a>
+       
+    </div>
+    <div class="logo-cart">
+        <a href="cart.html"> Shopping Bag<span><img width="20%" src="https://cdn-icons-png.flaticon.com/512/2662/2662503.png" alt=""></span></a>
+    </div>
+   </div>
+ <!-- this is second nav -->
+ <div class="navbar-2">
+  <div class=" navbar2-child">
+    <div class="item">NEW ARRIVALS</div>
+    <div class="item">DESIGNERS</div>
+    <div class="item">CLOTHING</div>
+    <div class="item">>SHOES</div>
+    <div class="item">BAGS</div>
+    <div class="item">ACCESSORIES</div>
+    <div class="item">JEWELRY</div>
+    <div class="item">VACATION</div>
+    <div class="item">SALE</div>
+    <input id="input" type="text" placeholder="Search For..">
+  </div>
+ </div>
+ <!-- this is horizontal line -->
+ <hr>
+ <div class="arrival">
+    <div class="filter">
+    
+    </div>
+    <div class="product">
+   
+    </div>
+ </div>
+ </body>
+ </html>
+ <script>
+ let x=(fetch("https://636dd2db91576e19e330edab.mockapi.io/product"))
+ x.then((res)=>res.json()).then((data)=>{
+        console.log(data)
+    });
+   
+    console.log(x)
+
+ </script>
