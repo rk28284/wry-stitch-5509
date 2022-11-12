@@ -102,6 +102,7 @@
 
 </html>
 <script>
+    // singup js
     let arr_data = JSON.parse(localStorage.getItem("arrival")) || [];
 //    let obj={};
     
@@ -143,7 +144,7 @@
     let Data=JSON.parse(localStorage.getItem("arrival"))||[];
     let flag="no";
     for(let i=0;i<Data.length;i++){
-        if(data[i].email==logemail&&data[i].passward==logpassword){
+        if(Data[i].email==logemail&&Data[i].passward==logpassword){
             flag="yes";
             break;
         }
