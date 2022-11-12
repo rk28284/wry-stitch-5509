@@ -8,10 +8,11 @@
     margin: auto;
 }
 .option{
-    height: 100px;
+    height: auto;
     width: 100%;
     display: flex;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .option1-child{
@@ -20,14 +21,14 @@
    justify-content: center;
    text-align: center;
   margin: 10px;
- 
+ margin-bottom: 20px;
 
 }
 .option2-child{
     padding-top: 10px;
     text-align: center;
     /* border: 1px solid blue; */
-    height: 88%;
+    height: auto;
    width:25%;
     justify-content: space-around
   
@@ -37,7 +38,7 @@
     display: flex;
     padding-top: 10px;
     margin: auto;
-    height: 100px;
+    height: auto;
     width: 95%;
     /* border: 1px solid red; */
     text-align: center;
@@ -354,3 +355,13 @@ button{
 a{
     display: block;
 }
+.option1-child:hover{
+    background-color: rgb(193, 96, 96);
+    cursor: pointer;
+}
+.option2-child:hover{
+    background-color: rgb(193, 96, 96);
+    cursor: pointer;
+}
+
+
