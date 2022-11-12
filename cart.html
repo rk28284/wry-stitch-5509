@@ -1,6 +1,57 @@
-<ul>
-    <li> <p> The finest edit of more than 200 international luxury brands</p></li>
-    <li><p> 900 new arrivals each week directly from the runway</p></li>
-    <li><p> Well-curated selection of items for a boutique-like shopping experience</p></li>
-    <li><p> Exclusive designer collaborations and capsule collections that you won’t find anywhere else</p></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <h1 id="total">Total price</h1>
+    <div class="product-container"></div>
+</body>
+</html>
+<script>
+    let cartProduct=JSON.parse(localStorage.getItem("cart"));
+    console.log(cartProduct);
+    displayProduct(cartProduct);
+
+    // let totalcost=cartProduct.reduce((acc,el)=>acc+el.price,0);
+    // let new_totalcost=totalcost.toFixed(2);
+    // document.querySelector("#total").innerText=new_totalcost+"$"
+    
+    
+    function displayProduct(cartProduct){
+
+      document.querySelector(".product-container").innerHTML="";
+      console.log(cartProduct)
+      cartProduct.forEach(element => {
+        let div=document.createElement("div");
+
+        let img=document.createElement("img");
+        img.setAttribute("src",element.img); 
+
+        let title=document.createElement("h2");
+        title.innerText=element.title;
+
+
+        let price=document.createElement("h3");
+        price.innerText="$ "+element.price
+
+        let details=document.createElement("p");
+        details.innerText=element.description
+
+        // localStorage.setItem("cart",JSON.stringify(cartitem));
+        
+        div.append(img,title,details,price);
+
+        document.querySelector(".product-container").append(div);        
+      });
+    }
+     
+</script>

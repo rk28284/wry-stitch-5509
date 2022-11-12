@@ -93,16 +93,30 @@ a{
 display: flex;
 flex-direction: row;
 width: 95%;
-height: 800px;
+height:auto;
  border: 1px solid rgb(38, 92, 199);
 }
-.product{
+.product-container{
     width: 85%;
-    height: 800px;
+    height: auto;
     border: 1px solid rgb(43, 199, 38);
 }
 .filter{
 width: 15%;
-height: 200px;
+height: auto;
 border: 1px solid rgb(199, 38, 38);
 }
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  .product-container>div{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+  }
+  .product-container>div>img{
+    width: 100%;
+  }
