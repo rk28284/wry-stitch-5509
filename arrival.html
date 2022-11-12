@@ -50,27 +50,128 @@
     <div class="item">JEWELRY</div>
     <div class="item">VACATION</div>
     <div class="item">SALE</div>
-    <input id="input" type="text" placeholder="Search For..">
+    <input id="input" oninput="search()" type="text" placeholder="Search For..">
   </div>
  </div>
  <!-- this is horizontal line -->
  <hr>
  <div class="arrival">
+    <!-- here filter start -->
     <div class="filter">
-    
+        <p>Filter By Product</p>
+        <select id="filter" onchange="productfilter()">
+            <option value="">Select Category</option>
+            <option value="Shirts">Shirts</option>
+            <option value="Jacket">Jacket</option>
+            <option value="Pants">Pants</option>
+            <option value="Jeans">Jeans</option>
+            <option value="Sweatshirts">Sweatshirts</option>
+            <option value="T-Shirts">T-Shirts</option>
+          </select>
+<!-- here sort start here -->
+<p>Sort By Price</p>
+<select id="selectsort" onchange="handleSort()">
+    <option value="">Select category</option>
+    <option value="LTH">Lower To Higher</option>
+    <option value="HTL">Higher To Lower</option>
+</select>
+
     </div>
-    <div class="product">
-   
+    <div class="product-container">
+    <!-- Here Append All the Products  -->
     </div>
  </div>
  </body>
  </html>
  <script>
- let x=(fetch("https://636dd2db91576e19e330edab.mockapi.io/product"))
- x.then((res)=>res.json()).then((data)=>{
-        console.log(data)
-    });
-   
-    console.log(x)
+
+let url="https://636f7f1df2ed5cb047de8aab.mockapi.io/product";
+    let bag=[];
+    let cartitem=JSON.parse(localStorage.getItem("cart"))||[];
+    async function getData(){
+     try{
+      let res= await fetch(url);
+      let out=await res.json();
+      bag=out;
+      console.log(out);
+      displayProduct(out);
+     }catch(err){
+      alert(err);
+     }
+    }
+    getData();
+
+    function displayProduct(out){
+      document.querySelector(".product-container").innerHTML="";
+      console.log(out)
+      out.forEach(element => {
+        let div=document.createElement("div");
+
+        let img=document.createElement("img");
+        img.setAttribute("src",element.img); 
+
+        let title=document.createElement("h2");
+        title.innerText=element.title;
+
+
+        let price=document.createElement("h3");
+        price.innerText="$ "+element.price
+
+        let details=document.createElement("p");
+        details.innerText=element.description
+
+        let pro=document.createElement("button")
+        pro.innerText="Add To Cart";
+       pro.addEventListener("click",function(){
+        cartitem.push(element);
+        localStorage.setItem("cart",JSON.stringify(cartitem));
+
+
+       })
+
+        div.append(img,title,details,price,pro);
+
+        document.querySelector(".product-container").append(div);        
+      });
+    }
+
+    // filter start here
+    function productfilter(){
+      let selectedproduct=document.querySelector("#filter").value;
+      // console.log(selectedproduct)
+      let filterData=bag.filter(function(ele){
+        return ele.category==selectedproduct;
+        
+      })
+      
+      console.log(filterData);
+      displayProduct(filterData);
+    }
+
+    // sort start here
+    function handleSort(){
+        let selected=document.querySelector("#selectsort").value;
+        // console.log("rakesh here");
+        if(selected=="HTL"){
+            bag.sort((a,b)=>b.price-a.price);
+            
+        }
+        if(selected=="LTH"){
+            bag.sort((a,b)=>a.price-b.price);
+          
+        }
+        // console.log(bag);
+        displayProduct(bag);
+    }
+//  search start here
+function search(){
+      let x=document.querySelector("#input").value;
+    //   console.log(x)
+      let newData=bag.filter(function(element){
+        return element.title.toLowerCase().includes(x.toLowerCase());
+      })
+   console.log(newData)
+   displayProduct(newData);
+    }
 
  </script>
