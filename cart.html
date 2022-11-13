@@ -11,6 +11,49 @@
     </style>
 </head>
 <body>
+  <div class="navbar">
+    <div class="option">
+        <div class="option">
+            <div id="womenclick" class="option1-child">WOMEN </div>
+            <div class="option1-child">MEN</div>
+            <div class="option1-child">KIDS</div>
+            <div class="option1-child">LIFE</div>
+        </div>
+        <div class="option">
+         <div id="signupclick" class="option2-child">Signup For Newsletter</div>
+        <div class="option2-child">My Account</div>
+        <div class="option2-child">My Wishlist</div>
+        <div class="option2-child">Malaysia|English</div>
+        </div>
+   </div>
+</div>
+   <!-- this is logo section -->
+   <div class="logo">
+    <div class="logo-child">
+        <a href="index.html">
+        <img width="25%" src="./Rakesh kumar.jpg" alt="logo-child">
+        </a>
+       
+    </div>
+    <div class="logo-cart">
+        <a href="cart.html"> Shopping Bag<span><img width="20%" src="https://cdn-icons-png.flaticon.com/512/2662/2662503.png" alt=""></span></a>
+    </div>
+   </div>
+ <!-- this is second nav -->
+ <div class="navbar-2">
+  <div class=" navbar2-child">
+    <div id="arrivalclick" class="item">NEW ARRIVALS</div>
+    <div class="item">DESIGNERS</div>
+    <div class="item">CLOTHING</div>
+    <div class="item">SHOES</div>
+    <div class="item">BAGS</div>
+    <div class="item">ACCESSORIES</div>
+    <div class="item">JEWELRY</div>
+    <div class="item">VACATION</div>
+    <div class="item">SALE</div>
+    <input id="input" type="text" placeholder="Search For..">
+  </div>
+ </div>
     
     <h1 id="total">Total price</h1>
     <div class="product-container"></div>
@@ -21,9 +64,9 @@
     console.log(cartProduct);
     displayProduct(cartProduct);
 
-    // let totalcost=cartProduct.reduce((acc,el)=>acc+el.price,0);
-    // let new_totalcost=totalcost.toFixed(2);
-    // document.querySelector("#total").innerText=new_totalcost+"$"
+    let totalcost=cartProduct.reduce((acc,el)=>acc+el.price,0);
+    let new_totalcost=totalcost.toFixed(2);
+    document.querySelector("#total").innerText="Total Cart Price:-"+"$"+new_totalcost
     
     
     function displayProduct(cartProduct){
@@ -53,5 +96,14 @@
         document.querySelector(".product-container").append(div);        
       });
     }
+    document.querySelector("#signupclick").addEventListener("click",function(){
+    window.location.href="signup.html";
+ })
+ document.querySelector("#womenclick").addEventListener("click",function(){
+   window.location.href="women.html";
+})
+document.querySelector("#arrivalclick").addEventListener("click",function(){
+   window.location.href="arrival.html";
+})
      
 </script>

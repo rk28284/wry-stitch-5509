@@ -74,6 +74,11 @@ padding-left: 10px;
     display:flex;
     width: 100%;
     height: auto;
+    
+}
+.item:hover{
+    background-color: bisque;
+    
 }
 .item{
     justify-content: center;

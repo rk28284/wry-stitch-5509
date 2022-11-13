@@ -7,7 +7,7 @@
     margin: auto;
 }
 .option{
-    height: 100px;
+    height: auto;
     width: 100%;
     display: flex;
     margin: auto;
@@ -94,17 +94,18 @@ display: flex;
 flex-direction: row;
 width: 95%;
 height:auto;
- border: 1px solid rgb(38, 92, 199);
+ /* border: 1px solid rgb(38, 92, 199); */
 }
 .product-container{
     width: 85%;
     height: auto;
-    border: 1px solid rgb(43, 199, 38);
+    /* border: 1px solid rgb(43, 199, 38); */
 }
 .filter{
 width: 15%;
 height: auto;
-border: 1px solid rgb(199, 38, 38);
+border: 1px solid rgb(0, 0, 0);
+text-align: center;
 }
 .product-container{
     display: grid;
@@ -114,7 +115,7 @@ border: 1px solid rgb(199, 38, 38);
   }
   .product-container>div{
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     border-radius: 10px;
   }
   .product-container>div>img{
