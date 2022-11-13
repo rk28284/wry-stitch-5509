@@ -3,10 +3,14 @@
     flex-direction: row;
     width: 95%;
     height: 600px;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 .signuppage{
     width: 50%;
     height: 600px;
-    border: 3px solid red;
+    /* border: 3px solid red; */
+}
+.item:hover{
+    background-color: bisque;
+    
 }

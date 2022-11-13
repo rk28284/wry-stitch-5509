@@ -1,4 +1,95 @@
+/* this is navbar */
+.navbar{
+  display:flex;
+  width: 95%;
+  height: auto;
+  /* border: 1px solid red; */
+  margin: auto;
+}
+.option{
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  margin-bottom: 50px;
+}
 
+.option1-child{
+ height: auto;
+ width:12%;
+ justify-content: center;
+ text-align: center;
+margin: 10px;
+margin-bottom: 20px;
+
+}
+.option2-child{
+  padding-top: 10px;
+  text-align: center;
+  /* border: 1px solid blue; */
+  height: auto;
+ width:25%;
+  justify-content: space-around
+
+}
+/* this is logo */
+.logo{
+  display: flex;
+  padding-top: 10px;
+  margin: auto;
+  height: auto;
+  width: 95%;
+  /* border: 1px solid red; */
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo-child{
+  justify-content: center;
+height: auto;
+width: 95%;
+/* border: 1px solid rgb(38, 92, 199); */
+}
+.logo-cart{
+  text-align:right;
+height:auto;
+width: 14%;
+/* border: 1px solid rgb(49, 196, 41); */
+margin-top: 10px;
+margin-left: 10px;
+padding-left: 10px;
+}
+
+/* this is second navbar */
+.navbar-2{
+  display:flex;
+  flex-direction: column;
+  width: 95%;
+  height: auto;
+  /* border: 1px solid red; */
+  margin: auto;
+
+}
+.navbar2-child{
+  display:flex;
+  width: 100%;
+  height: auto;
+}
+.item{
+  justify-content: center;
+  height: auto;
+  width:9%;
+  /* border: 1px solid rgb(38, 92, 199); */
+}
+#input{
+  margin-left: 20px;
+  margin-top: 5px;
+ padding-right: 50px;
+  height: 20px;
+  width: 9%;
+}
+#total{
+  text-align: left;
+}
 .product-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -7,7 +98,7 @@
   }
   .product-container>div{
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     border-radius: 10px;
   }
   .product-container>div>img{

@@ -13,7 +13,7 @@
    <div class="navbar">
     <div class="option">
         <div class="option">
-            <div class="option1-child"><a href="women.html">WOMEN</a> </div>
+          <div id="womenclick" class="option1-child">WOMEN </div>
             <div class="option1-child">MEN</div>
             <div class="option1-child">KIDS</div>
             <div class="option1-child">LIFE</div>
@@ -44,7 +44,7 @@
     <div class="item">NEW ARRIVALS</div>
     <div class="item">DESIGNERS</div>
     <div class="item">CLOTHING</div>
-    <div class="item">>SHOES</div>
+    <div class="item">SHOES</div>
     <div class="item">BAGS</div>
     <div class="item">ACCESSORIES</div>
     <div class="item">JEWELRY</div>
@@ -174,4 +174,7 @@ function search(){
    displayProduct(newData);
     }
 
+    document.querySelector("#womenclick").addEventListener("click",function(){
+   window.location.href="women.html";
+})
  </script>
