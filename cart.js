@@ -43,3 +43,6 @@ let cartProduct=JSON.parse(localStorage.getItem("cart"));
 document.querySelector("#arrivalclick").addEventListener("click",function(){
    window.location.href="arrival.html";
 })
+document.querySelector("#checkout").addEventListener("click",function(){
+  window.location.href="signup.html";
+})

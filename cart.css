@@ -104,3 +104,17 @@ padding-left: 10px;
   .product-container>div>img{
     width: 100%;
   }
+  /* #checkout{
+    text-align:right;
+  margin-right: 2000px;
+  padding-left: 20px;
+  } */
+  #checkout{
+    background-color: black;
+    color: white;
+    margin-left: 1000px;
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
