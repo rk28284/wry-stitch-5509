@@ -361,11 +361,11 @@ a{
     display: block;
 }
 .option1-child:hover{
-    background-color: rgb(193, 96, 96);
+    background-color: bisque;
     cursor: pointer;
 }
 .option2-child:hover{
-    background-color: rgb(193, 96, 96);
+    background-color:  bisque;
     cursor: pointer;
 }
 

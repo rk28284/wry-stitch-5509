@@ -14,3 +14,40 @@
     background-color: bisque;
     
 }
+.option1-child:hover{
+    background-color: bisque;
+    cursor: pointer;
+}
+.option2-child:hover{
+    background-color:  bisque;
+    cursor: pointer;
+}
+.signupinput{
+    padding: 5px;
+    padding-right: 50px;
+    margin: 1%;
+    gap: 10px;
+}
+.logininput{
+   
+    margin: 1.5%;
+    padding-right: 80px;
+    padding: 1%;
+}
+#submit{
+    color: white;
+    background-color: rgb(18, 13, 4);
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+#signup{
+    color: white;
+    background-color: rgb(18, 13, 4);
+
+    border-radius: 5px;
+}
+#forget{
+    color: red;
+}
